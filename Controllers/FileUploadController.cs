@@ -25,7 +25,19 @@ namespace BlobFileUpload.Controllers
             }
 
             return Ok("Files Uploaded Successfully");
+        }
 
+        [HttpGet("DownloadBlobFile")]
+        public async Task<ActionResult> DownloadFile()
+        {
+            BlobClient blobClient = new BlobClient(ConnectionString, "storagemanju", "Balance-Sheet-Example (1).pdf");
+            using (var stream = new MemoryStream())
+            {
+                await blobClient.DownloadToAsync(stream);
+                stream.Position = 0;
+                var contentType = (await blobClient.GetPropertiesAsync()).Value.ContentType;
+                return File(stream.ToArray(), contentType, blobClient.Name);
+            }
         }
     }
 }
