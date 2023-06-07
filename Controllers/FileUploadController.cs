@@ -39,5 +39,12 @@ namespace BlobFileUpload.Controllers
                 return File(stream.ToArray(), contentType, blobClient.Name);
             }
         }
+
+        [HttpGet("hello")]
+
+        public IActionResult SendName()
+        {
+            return Ok("Hi Manju");
+        }
     }
 }
