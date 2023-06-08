@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'Manjucc'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8D629933F58349A6A2C4A8055FEF4581 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DC66B65E673A400AB7D5C3EED9F81996 }}
           package: .
