@@ -46,5 +46,13 @@ namespace BlobFileUpload.Controllers
         {
             return Ok("Hi Manju");
         }
+
+        [HttpGet("Hi")]
+
+        public IActionResult Hi()
+        {
+            return Ok("Hi");
+        }
+
     }
 }
