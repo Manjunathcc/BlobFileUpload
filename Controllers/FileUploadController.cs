@@ -54,5 +54,12 @@ namespace BlobFileUpload.Controllers
             return Ok("Hi");
         }
 
+        [HttpGet("Modi")]
+
+        public IActionResult GoodMorning()
+        {
+            return Ok("Good Morning Modi");
+        }
+
     }
 }
